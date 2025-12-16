@@ -1,0 +1,40 @@
+{
+  "auto_connect": false,
+  "auto_connect_server": null,
+  "start_on_boot": false,
+  "minimize_to_tray": true,
+  "protocol_config": {
+    "protocol": "WireGuard",
+    "port": 51820,
+    "use_tcp": false,
+    "obfuscation": false,
+    "mtu": 1420
+  },
+  "kill_switch": {
+    "mode": "Automatic",
+    "allow_lan": true,
+    "allowed_ips": [],
+    "allowed_apps": []
+  },
+  "dns_mode": "Auto",
+  "ipv6_leak_protection": true,
+  "webrtc_leak_protection": true,
+  "split_tunnel": {
+    "mode": "Disabled",
+    "apps": [],
+    "domains": [],
+    "ip_ranges": []
+  },
+  "mtu": 1420,
+  "connect_timeout": 30,
+  "reconnect_on_disconnect": true,
+  "reconnect_attempts": 3,
+  "block_trackers": false,
+  "block_ads": false,
+  "block_malware": true,
+  "anonymous_usage_stats": false,
+  "show_notifications": true,
+  "notify_on_connect": true,
+  "notify_on_disconnect": true,
+  "notify_on_ip_change": false
+}
