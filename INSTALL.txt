@@ -1,0 +1,107 @@
+VPN Mobile - Installation Instructions
+========================================
+
+REQUIREMENTS:
+-------------
+- Rust 1.70 or higher
+- Cargo package manager
+
+QUICK INSTALLATION:
+-------------------
+
+1. Install Rust (if not already installed):
+   curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+   source $HOME/.cargo/env
+
+2. Extract the archive:
+   tar -xzf vpn-mobile-rust-v0.1.0.tar.gz
+   cd vpn-mobile-rust-v0.1.0
+
+3. Build the project:
+   cargo build --release
+
+4. Run the application:
+   cargo run --release
+   
+   Or use the binary directly:
+   ./target/release/vpn-cli
+
+SYSTEM-WIDE INSTALLATION:
+--------------------------
+
+After building, you can install it system-wide:
+
+   cargo install --path .
+
+This will install vpn-cli to ~/.cargo/bin/
+Make sure ~/.cargo/bin is in your PATH.
+
+MANUAL INSTALLATION:
+--------------------
+
+1. Build the project:
+   cargo build --release
+
+2. Copy the binary:
+   sudo cp target/release/vpn-cli /usr/local/bin/
+
+3. Make it executable:
+   sudo chmod +x /usr/local/bin/vpn-cli
+
+4. Create config directory:
+   mkdir -p ~/.config/vpn-mobile
+
+5. Copy default configuration:
+   cp config/default-config.json ~/.config/vpn-mobile/config.json
+
+USAGE:
+------
+
+After installation, run:
+   vpn-cli
+
+Or if not in PATH:
+   ./target/release/vpn-cli
+
+FEATURES:
+---------
+✓ 25+ Countries with multiple servers
+✓ Multiple VPN protocols (WireGuard, OpenVPN, IKEv2, L2TP, PPTP)
+✓ Kill switch for connection protection
+✓ DNS leak protection
+✓ Split tunneling
+✓ Usage statistics and analytics
+✓ Custom DNS servers
+✓ Ad and malware blocking
+✓ Server favorites and history
+
+TROUBLESHOOTING:
+----------------
+
+1. If cargo command not found:
+   - Install Rust: https://rustup.rs/
+   - Or add ~/.cargo/bin to PATH
+
+2. If build fails:
+   - Update Rust: rustup update
+   - Clean and rebuild: cargo clean && cargo build --release
+
+3. If connection fails:
+   - Check internet connection
+   - Try different protocol in settings
+   - Check firewall settings
+
+4. For permissions errors:
+   - Some features may require root/admin privileges
+   - Run with sudo if needed (not recommended for regular use)
+
+SUPPORT:
+--------
+For issues or questions, please visit:
+https://github.com/yourusername/vpn-mobile-rust
+
+SECURITY NOTE:
+--------------
+This is a demonstration VPN application.
+For production use, ensure proper security audits and use
+established VPN providers with proven security track records.
