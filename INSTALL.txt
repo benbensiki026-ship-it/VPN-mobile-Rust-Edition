@@ -98,7 +98,7 @@ TROUBLESHOOTING:
 SUPPORT:
 --------
 For issues or questions, please visit:
-https://github.com/benbensiki026@-Ship-It/vpn-mobile-rust
+https://github.com/benbensiki026-Ship-It/vpn-mobile-rust
 
 SECURITY NOTE:
 --------------
